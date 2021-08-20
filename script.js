@@ -5,6 +5,7 @@ let score = 20;
 let highscore = 0;
 
 document.querySelector('.play-again').addEventListener('click', function () {
+  document.querySelector('.number').textContent = '?';
   number = Math.trunc(Math.random() * 20 + 1);
   score = 20;
   document.querySelector('.score').textContent = 20;
@@ -29,6 +30,7 @@ document.querySelector('.check').addEventListener('click', function () {
         highscore = score;
       }
       document.querySelector('.highscore').textContent = highscore;
+      document.querySelector('.number').textContent = number;
     } else if (guess > number) {
       document.querySelector('.message').textContent = 'High!';
       score--;
